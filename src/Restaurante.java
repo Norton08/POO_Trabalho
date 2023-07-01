@@ -1,0 +1,19 @@
+import java.util.Date;
+import java.util.ResourceBundle;
+
+public class Restaurante extends Comercio {
+    private long codigoRestaurante;
+
+    public Restaurante(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade, long codigoRestaurante) {
+        super(cnpj, razaoSocial, nomeFantasia, telefone, email, horarioAtendimento, endereco, cidade);
+        this.codigoRestaurante = codigoRestaurante;
+    }
+
+    public long getCodigoRestaurante() {
+        return codigoRestaurante;
+    }
+
+    public void setCodigoRestaurante(long codigoRestaurante) {
+        this.codigoRestaurante = codigoRestaurante;
+    }
+}
