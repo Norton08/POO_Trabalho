@@ -1,12 +1,27 @@
-public class Entregador extends Pessoa {
-    Long id;
-    String cnh;
+import java.util.Date;
 
-    public Entregador(String CPF, String nome, String telefone, String email, String endereco, Long id, String cnh) {
-        super(CPF, nome, telefone, email, endereco);
+public class Entregador extends Pessoa{
+    private long codigoEntregador;
+    private String cnh;
+    public Entregador(String cpf, String nome, String telefone, String email, Endereco residencia, long codigoEntregador, String cnh) {
+        super(cpf, nome, telefone, email, residencia);
+        this.codigoEntregador = codigoEntregador;
+        this.cnh = cnh;
     }
 
-    public static void cadastrar() {
+    public long getCodigoEntregador() {
+        return codigoEntregador;
     }
 
+    public void setCodigoEntregador(long codigoEntregador) {
+        this.codigoEntregador = codigoEntregador;
+    }
+
+    public String getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
+    }
 }
