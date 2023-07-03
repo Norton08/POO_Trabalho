@@ -13,4 +13,8 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
+    public static void cadastrar() {
+
+    }
+
 }

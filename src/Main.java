@@ -48,13 +48,13 @@ public class Main {
         int resposta = input.nextInt();
         switch (resposta) {
             case 1:
-                CadastroEmpresa.cadastrar();
+                Comercio.cadastrar();
                 break;
             case 2:
-                CadastroEntregador.cadastrar();
+                Entregador.cadastrar();
                 break;
             case 3:
-                CadastroPessoa.cadastrar();
+                Pessoa.cadastrar();
                 break;
             default:
                 System.out.println("Opção inválida.");

@@ -12,7 +12,8 @@ public abstract class Comercio {
 
     protected Cidade cidade;
 
-    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade) {
+    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
+            Date horarioAtendimento, Endereco endereco, Cidade cidade) {
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
@@ -85,5 +86,8 @@ public abstract class Comercio {
 
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
+    }
+
+    public static void cadastrar() {
     }
 }
