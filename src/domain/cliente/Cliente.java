@@ -10,10 +10,12 @@ public class Cliente extends Pessoa {
     private String numeroCartao;
     private Date dataValidade;
     private String codigoSeguranca;
+    private static int contador = 0;
 
-    public Cliente(String cpf, String nome, String telefone, String email, Endereco residencia, long codigoCliente, String numeroCartao, Date dataValidade, String codigoSeguranca) {
+    public Cliente(String cpf, String nome, String telefone, String email, Endereco residencia, String numeroCartao,
+            Date dataValidade, String codigoSeguranca) {
         super(cpf, nome, telefone, email, residencia);
-        this.codigoCliente = codigoCliente;
+        this.codigoCliente = contador++;
         this.numeroCartao = numeroCartao;
         this.dataValidade = dataValidade;
         this.codigoSeguranca = codigoSeguranca;

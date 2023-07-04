@@ -8,17 +8,15 @@ import java.util.Date;
 
 public class Farmarcia extends Comercio {
     private long codigoFarmacia;
+    private static int contador = 0;
 
-    public Farmarcia(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade, long codigoFarmacia) {
+    public Farmarcia(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
+            Date horarioAtendimento, Endereco endereco, Cidade cidade) {
         super(cnpj, razaoSocial, nomeFantasia, telefone, email, horarioAtendimento, endereco, cidade);
-        this.codigoFarmacia = codigoFarmacia;
+        this.codigoFarmacia = contador++;
     }
 
     public long getCodigoFarmacia() {
         return codigoFarmacia;
-    }
-
-    public void setCodigoFarmacia(long codigoFarmacia) {
-        this.codigoFarmacia = codigoFarmacia;
     }
 }

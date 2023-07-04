@@ -8,17 +8,15 @@ import java.util.Date;
 
 public class Mercado extends Comercio {
     private long codigoMercado;
+    private static int contador = 0;
 
-    public Mercado(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade, long codigoMercado) {
+    public Mercado(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
+            Date horarioAtendimento, Endereco endereco, Cidade cidade) {
         super(cnpj, razaoSocial, nomeFantasia, telefone, email, horarioAtendimento, endereco, cidade);
-        this.codigoMercado = codigoMercado;
+        this.codigoMercado = contador++;
     }
 
     public long getCodigoMercado() {
         return codigoMercado;
-    }
-
-    public void setCodigoMercado(long codigoMercado) {
-        this.codigoMercado = codigoMercado;
     }
 }

@@ -7,19 +7,17 @@ public class Entregador extends Pessoa {
     private long codigoEntregador;
     private String cnh;
     private boolean isDisponivel;
-    public Entregador(String cpf, String nome, String telefone, String email, Endereco endereco, long codigoEntregador, String cnh) {
+    private static int contador = 0;
+
+    public Entregador(String cpf, String nome, String telefone, String email, Endereco endereco, String cnh) {
         super(cpf, nome, telefone, email, endereco);
-        this.codigoEntregador = codigoEntregador;
+        this.codigoEntregador = contador++;
         this.cnh = cnh;
         this.isDisponivel = true;
     }
 
     public long getCodigoEntregador() {
         return codigoEntregador;
-    }
-
-    public void setCodigoEntregador(long codigoEntregador) {
-        this.codigoEntregador = codigoEntregador;
     }
 
     public String getCnh() {

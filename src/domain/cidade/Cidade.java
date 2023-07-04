@@ -1,12 +1,15 @@
 package domain.cidade;
 
 public class Cidade {
+    private long codigoCidade;
     private String estado;
     private String pais;
+    private static int contador = 0;
 
     public Cidade(String estado, String pais) {
         this.estado = estado;
         this.pais = pais;
+        this.codigoCidade = contador++;
     }
 
     public String getEstado() {
@@ -23,5 +26,9 @@ public class Cidade {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public long getCodigoCidade() {
+        return codigoCidade;
     }
 }

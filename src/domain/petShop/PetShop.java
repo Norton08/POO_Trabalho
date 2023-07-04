@@ -8,17 +8,16 @@ import java.util.Date;
 
 public class PetShop extends Comercio {
     private long codigoPetShop;
+    private static int contador = 0;
 
-    public PetShop(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade, long codigoPetShop) {
+    public PetShop(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
+            Date horarioAtendimento, Endereco endereco, Cidade cidade) {
         super(cnpj, razaoSocial, nomeFantasia, telefone, email, horarioAtendimento, endereco, cidade);
-        this.codigoPetShop = codigoPetShop;
+        this.codigoPetShop = contador++;
     }
 
     public long getCodigoPetShop() {
         return codigoPetShop;
     }
 
-    public void setCodigoPetShop(long codigoPetShop) {
-        this.codigoPetShop = codigoPetShop;
-    }
 }

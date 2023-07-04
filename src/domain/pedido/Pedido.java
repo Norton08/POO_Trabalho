@@ -1,9 +1,10 @@
 package domain.pedido;
-import enums.Status;
+
+import enumss.Status;
 import jdk.jfr.Timespan;
 
 public class Pedido {
-    private static int contador;
+    private static int contador = 0;
     private int codigoPedido;
     private Timespan tempoEstimado;
     private Status status;

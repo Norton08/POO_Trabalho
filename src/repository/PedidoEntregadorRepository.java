@@ -2,7 +2,7 @@ package repository;
 
 import domain.entregador.Entregador;
 import domain.pedido.Pedido;
-import enums.Status;
+import enumss.Status;
 import iRepository.IPedidoEntregadorRepository;
 
 import java.util.ArrayList;
@@ -34,9 +34,10 @@ public class PedidoEntregadorRepository implements IPedidoEntregadorRepository {
     }
 
     @Override
-    public void atribuirPedidoParaEntregador(ArrayList<Pedido> pedidos, ArrayList<Entregador> entregadores,  int idPedido, int idEntregador) {
-        Pedido pedido = buscarPedidoPorId(pedidos ,idPedido);
-        Entregador entregador = buscarEntregadorPorId(entregadores,idEntregador);
+    public void atribuirPedidoParaEntregador(ArrayList<Pedido> pedidos, ArrayList<Entregador> entregadores,
+            int idPedido, int idEntregador) {
+        Pedido pedido = buscarPedidoPorId(pedidos, idPedido);
+        Entregador entregador = buscarEntregadorPorId(entregadores, idEntregador);
 
         if (pedido != null && entregador != null && entregador.isDisponivel()) {
             pedido.setStatus(Status.EmPreparo);
@@ -48,7 +49,7 @@ public class PedidoEntregadorRepository implements IPedidoEntregadorRepository {
     }
 
     @Override
-    public void marcarPedidoComoEntregue(ArrayList<Pedido> pedidos,int idPedido) {
+    public void marcarPedidoComoEntregue(ArrayList<Pedido> pedidos, int idPedido) {
         Pedido pedido = buscarPedidoPorId(pedidos, idPedido);
 
         if (pedido != null) {

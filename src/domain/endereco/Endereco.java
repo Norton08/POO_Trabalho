@@ -1,12 +1,14 @@
 package domain.endereco;
 
 public class Endereco {
+    private long codigoEndereco;
     private String lote;
     private String quadra;
     private long numero;
     private String cep;
     private String complemento;
     private String rua;
+    private static int contador = 0;
 
     public Endereco(String lote, String quadra, long numero, String cep, String complemento, String rua) {
         this.lote = lote;
@@ -15,6 +17,7 @@ public class Endereco {
         this.cep = cep;
         this.complemento = complemento;
         this.rua = rua;
+        this.codigoEndereco = contador++;
     }
 
     public String getLote() {
@@ -63,5 +66,9 @@ public class Endereco {
 
     public void setRua(String rua) {
         this.rua = rua;
+    }
+
+    public long getCodigoEndereco() {
+        return codigoEndereco;
     }
 }

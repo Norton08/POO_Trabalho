@@ -7,12 +7,15 @@ public class Produto {
     private String nome;
     private String descricao;
     private ArrayList<String> comentarios;
+    private long codigoProduto;
+    private static int contador = 0;
 
     public Produto(double valor, String nome, String descricao, ArrayList<String> comentarios) {
         this.valor = valor;
         this.nome = nome;
         this.descricao = descricao;
         this.comentarios = comentarios;
+        this.codigoProduto = contador++;
     }
 
     public double getValor() {
@@ -45,5 +48,9 @@ public class Produto {
 
     public void setComentarios(ArrayList<String> comentarios) {
         this.comentarios = comentarios;
+    }
+
+    public long getCodigoProduto() {
+        return codigoProduto;
     }
 }
