@@ -1,13 +1,12 @@
-import java.util.Date;
 
 public class Entregador extends Pessoa {
     private long codigoEntregador;
     private String cnh;
+    private static long contador = 0;
 
-    public Entregador(String cpf, String nome, String telefone, String email, Endereco residencia,
-            long codigoEntregador, String cnh) {
+    public Entregador(String cpf, String nome, String telefone, String email, Endereco residencia, String cnh) {
         super(cpf, nome, telefone, email, residencia);
-        this.codigoEntregador = codigoEntregador;
+        this.codigoEntregador = contador++;
         this.cnh = cnh;
     }
 
