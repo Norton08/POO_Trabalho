@@ -51,10 +51,10 @@ public class Main {
                 Comercio.cadastrar();
                 break;
             case 2:
-                Entregador.cadastrar();
+                // Entregador.cadastrar();
                 break;
             case 3:
-                Pessoa.cadastrar();
+                // Pessoa.cadastrar();
                 break;
             default:
                 System.out.println("Opção inválida.");
