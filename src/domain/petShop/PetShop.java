@@ -1,3 +1,9 @@
+package domain.petShop;
+
+import domain.cidade.Cidade;
+import domain.comercio.Comercio;
+import domain.endereco.Endereco;
+
 import java.util.Date;
 
 public class PetShop extends Comercio {

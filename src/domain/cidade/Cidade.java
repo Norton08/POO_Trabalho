@@ -1,3 +1,5 @@
+package domain.cidade;
+
 public class Cidade {
     private String estado;
     private String pais;

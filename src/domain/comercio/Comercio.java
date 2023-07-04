@@ -1,3 +1,8 @@
+package domain.comercio;
+
+import domain.cidade.Cidade;
+import domain.endereco.Endereco;
+
 import java.util.Date;
 
 public abstract class Comercio {
@@ -13,7 +18,7 @@ public abstract class Comercio {
     protected Cidade cidade;
 
     public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
-            Date horarioAtendimento, Endereco endereco, Cidade cidade) {
+                    Date horarioAtendimento, Endereco endereco, Cidade cidade) {
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;

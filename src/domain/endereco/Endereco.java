@@ -1,3 +1,5 @@
+package domain.endereco;
+
 public class Endereco {
     private String lote;
     private String quadra;

@@ -1,3 +1,7 @@
+package domain.pessoa;
+
+import domain.endereco.Endereco;
+
 public abstract class Pessoa {
     protected String cpf;
     protected String nome;

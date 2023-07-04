@@ -1,3 +1,5 @@
+import domain.comercio.Comercio;
+
 import java.util.Scanner;
 
 public class Main {
@@ -43,18 +45,18 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Cadastrar como: ");
         System.out.println("1 - Empresa");
-        System.out.println("2 - Entregador");
-        System.out.println("3 - Cliente");
+        System.out.println("2 - domain.entregador.Entregador");
+        System.out.println("3 - domain.cliente.Cliente");
         int resposta = input.nextInt();
         switch (resposta) {
             case 1:
                 Comercio.cadastrar();
                 break;
             case 2:
-//                Entregador.cadastrar();
+//                domain.entregador.Entregador.cadastrar();
                 break;
             case 3:
-//                Pessoa.cadastrar();
+//                domain.pessoa.Pessoa.cadastrar();
                 break;
             default:
                 System.out.println("Opção inválida.");

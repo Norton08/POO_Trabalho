@@ -1,6 +1,11 @@
+package domain.cliente;
+
+import domain.endereco.Endereco;
+import domain.pessoa.Pessoa;
+
 import java.util.Date;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
     private long codigoCliente;
     private String numeroCartao;
     private Date dataValidade;

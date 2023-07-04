@@ -1,6 +1,12 @@
+package domain.mercado;
+
+import domain.cidade.Cidade;
+import domain.comercio.Comercio;
+import domain.endereco.Endereco;
+
 import java.util.Date;
 
-public class Mercado extends Comercio{
+public class Mercado extends Comercio {
     private long codigoMercado;
 
     public Mercado(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Date horarioAtendimento, Endereco endereco, Cidade cidade, long codigoMercado) {

@@ -1,3 +1,9 @@
+package domain.farmacia;
+
+import domain.cidade.Cidade;
+import domain.comercio.Comercio;
+import domain.endereco.Endereco;
+
 import java.util.Date;
 
 public class Farmarcia extends Comercio {
