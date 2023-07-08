@@ -3,16 +3,17 @@ package domain.entrega;
 import domain.cliente.Cliente;
 import domain.entregador.Entregador;
 import domain.pedido.Pedido;
-import domain.produto.Produto;
-
-import java.util.ArrayList;
 
 public class Entrega {
     private Pedido pedido;
     private Entregador entregador;
     private Cliente cliente;
 
+    private int codigoEntrega;
+    private static int contador = 0;
+
     public Entrega(Pedido pedido, Entregador entregador, Cliente cliente) {
+        this.codigoEntrega = contador++;
         this.pedido = pedido;
         this.entregador = entregador;
         this.cliente = cliente;

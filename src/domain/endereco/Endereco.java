@@ -1,8 +1,7 @@
 package domain.endereco;
 
-import domain.cidade.Cidade;
-
 public class Endereco {
+    private static int contador = 0;
     private long codigoEndereco;
     private String lote;
     private String quadra;
@@ -10,17 +9,16 @@ public class Endereco {
     private String cep;
     private String complemento;
     private String rua;
-    private Cidade cidade;
-    private static int contador = 0;
+    private String cidade;
 
-    public Endereco(String lote, String quadra, long numero, String cep, String complemento, String rua, Cidade cidade) {
+    public Endereco(String lote, String quadra, long numero, String cep, String complemento, String rua, String cidade) {
+        this.codigoEndereco = contador++;
         this.lote = lote;
         this.quadra = quadra;
         this.numero = numero;
         this.cep = cep;
         this.complemento = complemento;
         this.rua = rua;
-        this.codigoEndereco = contador++;
         this.cidade = cidade;
     }
 
@@ -74,5 +72,13 @@ public class Endereco {
 
     public long getCodigoEndereco() {
         return codigoEndereco;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 }

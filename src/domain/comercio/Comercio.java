@@ -1,24 +1,23 @@
 package domain.comercio;
 
-import domain.cidade.Cidade;
 import domain.endereco.Endereco;
 
 import java.util.Date;
 
-public abstract class Comercio {
+public class Comercio {
+    private static int contador = 0;
+    private long codigoComercio;
     protected String cnpj;
     protected String razaoSocial;
     protected String nomeFantasia;
     protected String telefone;
     protected String email;
     protected Date horarioAtendimento;
-
     protected Endereco endereco;
 
-    protected Cidade cidade;
-
     public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
-                    Date horarioAtendimento, Endereco endereco, Cidade cidade) {
+                    Date horarioAtendimento, Endereco endereco) {
+        this.codigoComercio = contador++;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
@@ -26,7 +25,6 @@ public abstract class Comercio {
         this.email = email;
         this.horarioAtendimento = horarioAtendimento;
         this.endereco = endereco;
-        this.cidade = cidade;
     }
 
     public String getCnpj() {
@@ -83,16 +81,5 @@ public abstract class Comercio {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
-    }
-
-    public Cidade getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
-    }
-
-    public static void cadastrar() {
     }
 }

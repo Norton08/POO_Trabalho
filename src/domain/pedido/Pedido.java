@@ -7,7 +7,7 @@ import jdk.jfr.Timespan;
 
 import java.util.ArrayList;
 
-public class Pedido {
+public class Pedido extends Produto {
     private static int contador = 0;
     private int codigoPedido;
     private Timespan tempoEstimado;

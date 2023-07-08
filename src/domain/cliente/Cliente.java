@@ -6,11 +6,11 @@ import domain.pessoa.Pessoa;
 import java.util.Date;
 
 public class Cliente extends Pessoa {
+    private static int contador = 0;
     private long codigoCliente;
     private String numeroCartao;
     private Date dataValidade;
     private String codigoSeguranca;
-    private static int contador = 0;
 
     public Cliente(String cpf, String nome, String telefone, String email, Endereco residencia, String numeroCartao,
             Date dataValidade, String codigoSeguranca) {
