@@ -1,5 +1,7 @@
 package domain.endereco;
 
+import domain.cidade.Cidade;
+
 public class Endereco {
     private long codigoEndereco;
     private String lote;
@@ -8,9 +10,10 @@ public class Endereco {
     private String cep;
     private String complemento;
     private String rua;
+    private Cidade cidade;
     private static int contador = 0;
 
-    public Endereco(String lote, String quadra, long numero, String cep, String complemento, String rua) {
+    public Endereco(String lote, String quadra, long numero, String cep, String complemento, String rua, Cidade cidade) {
         this.lote = lote;
         this.quadra = quadra;
         this.numero = numero;
@@ -18,6 +21,7 @@ public class Endereco {
         this.complemento = complemento;
         this.rua = rua;
         this.codigoEndereco = contador++;
+        this.cidade = cidade;
     }
 
     public String getLote() {
