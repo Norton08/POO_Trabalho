@@ -15,8 +15,7 @@ public class Comercio {
     protected Date horarioAtendimento;
     protected Endereco endereco;
 
-    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
-                    Date horarioAtendimento, Endereco endereco) {
+    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Endereco endereco) {
         this.codigoComercio = contador++;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;

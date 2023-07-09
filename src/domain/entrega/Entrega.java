@@ -42,4 +42,14 @@ public class Entrega {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
+    @Override
+    public String toString() {
+        return "Entrega: " + codigoEntrega +
+                "\n------------------" +
+                "\n" + pedido.toString() +
+                "\n" + entregador.toString() +
+                "\n" + cliente.toString() +
+                "\n------------------";
+    }
 }

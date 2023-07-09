@@ -30,22 +30,6 @@ public class Produto {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public ArrayList<String> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(ArrayList<String> comentarios) {
-        this.comentarios = comentarios;
-    }
-
     public long getCodigoProduto() {
         return codigoProduto;
     }
