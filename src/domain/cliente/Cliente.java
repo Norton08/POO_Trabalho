@@ -3,8 +3,6 @@ package domain.cliente;
 import domain.endereco.Endereco;
 import domain.pessoa.Pessoa;
 
-import java.util.Date;
-
 public class Cliente extends Pessoa {
     private static int contador = 0;
     private long codigoCliente;
@@ -25,7 +23,7 @@ public class Cliente extends Pessoa {
     @Override
     public String toString() {
         return "====================" +
-                "\nCliente: "+ codigoCliente +
+                "\nCliente: " + codigoCliente +
                 "\n" + nome + " - " + telefone;
 
     }

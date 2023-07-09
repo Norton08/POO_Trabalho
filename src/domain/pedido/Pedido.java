@@ -3,9 +3,7 @@ package domain.pedido;
 import domain.comercio.Comercio;
 import domain.produto.Produto;
 import enumss.Status;
-import jdk.jfr.Timespan;
-
-import java.util.ArrayList;
+//import jdk.jfr.Timespan;
 
 public class Pedido {
     private static int contador = 0;
@@ -15,7 +13,7 @@ public class Pedido {
     private Produto produto;
     private Comercio comercio;
 
-    public Pedido(String tempoEstimado, Status status,Produto produto, Comercio comercio) {
+    public Pedido(String tempoEstimado, Status status, Produto produto, Comercio comercio) {
         this.codigoPedido = ++contador;
         this.tempoEstimado = tempoEstimado;
         this.status = status;
@@ -62,7 +60,7 @@ public class Pedido {
     @Override
     public String toString() {
         return "Pedido: " + codigoPedido +
-                "\nTempo Estimado = " + tempoEstimado + " - " + status+
+                "\nTempo Estimado = " + tempoEstimado + " - " + status +
                 "\n====================";
     }
 }

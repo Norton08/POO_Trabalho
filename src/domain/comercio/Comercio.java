@@ -2,8 +2,6 @@ package domain.comercio;
 
 import domain.endereco.Endereco;
 
-import java.util.Date;
-
 public class Comercio {
     private static int contador = 0;
     private long codigoComercio;
@@ -14,7 +12,8 @@ public class Comercio {
     protected String email;
     protected Endereco endereco;
 
-    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Endereco endereco) {
+    public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email,
+            Endereco endereco) {
         this.codigoComercio = contador++;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;

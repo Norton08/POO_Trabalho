@@ -1,7 +1,5 @@
 package domain.produto;
 
-import java.util.ArrayList;
-
 public class Produto {
     private static int contador = 0;
     private long codigoProduto;

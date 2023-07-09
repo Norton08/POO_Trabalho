@@ -7,8 +7,6 @@ import domain.pedido.Pedido;
 import domain.produto.Produto;
 import enumss.Status;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
