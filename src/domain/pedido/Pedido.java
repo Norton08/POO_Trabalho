@@ -43,11 +43,11 @@ public class Pedido {
         this.status = status;
     }
 
-    public Produto getProdutos() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProdutos(Produto produtos) {
+    public void setProduto(Produto produtos) {
         this.produto = produtos;
     }
 
