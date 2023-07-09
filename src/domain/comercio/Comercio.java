@@ -12,7 +12,6 @@ public class Comercio {
     protected String nomeFantasia;
     protected String telefone;
     protected String email;
-    protected Date horarioAtendimento;
     protected Endereco endereco;
 
     public Comercio(String cnpj, String razaoSocial, String nomeFantasia, String telefone, String email, Endereco endereco) {
@@ -22,7 +21,6 @@ public class Comercio {
         this.nomeFantasia = nomeFantasia;
         this.telefone = telefone;
         this.email = email;
-        this.horarioAtendimento = horarioAtendimento;
         this.endereco = endereco;
     }
 
@@ -64,14 +62,6 @@ public class Comercio {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Date getHorarioAtendimento() {
-        return horarioAtendimento;
-    }
-
-    public void setHorarioAtendimento(Date horarioAtendimento) {
-        this.horarioAtendimento = horarioAtendimento;
     }
 
     public Endereco getEndereco() {
