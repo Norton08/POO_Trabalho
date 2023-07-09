@@ -29,27 +29,11 @@ public class Cliente extends Pessoa {
         this.codigoCliente = codigoCliente;
     }
 
-    public String getNumeroCartao() {
-        return numeroCartao;
-    }
+    @Override
+    public String toString() {
+        return "====================" +
+                "\nCliente: "+ codigoCliente +
+                "\n" + nome + " - " + telefone;
 
-    public void setNumeroCartao(String numeroCartao) {
-        this.numeroCartao = numeroCartao;
-    }
-
-    public Date getDataValidade() {
-        return dataValidade;
-    }
-
-    public void setDataValidade(Date dataValidade) {
-        this.dataValidade = dataValidade;
-    }
-
-    public String getCodigoSeguranca() {
-        return codigoSeguranca;
-    }
-
-    public void setCodigoSeguranca(String codigoSeguranca) {
-        this.codigoSeguranca = codigoSeguranca;
     }
 }

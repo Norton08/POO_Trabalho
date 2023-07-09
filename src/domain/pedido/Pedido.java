@@ -7,19 +7,19 @@ import jdk.jfr.Timespan;
 
 import java.util.ArrayList;
 
-public class Pedido extends Produto {
+public class Pedido {
     private static int contador = 0;
     private int codigoPedido;
-    private Timespan tempoEstimado;
+    private String tempoEstimado;
     private Status status;
-    private ArrayList<Produto> produtos;
+    private Produto produto;
     private Comercio comercio;
 
-    public Pedido(int codigoPedido, Timespan tempoEstimado, Status status, ArrayList<Produto> produtos, Comercio comercio) {
-        this.codigoPedido = contador++;
+    public Pedido(String tempoEstimado, Status status,Produto produto, Comercio comercio) {
+        this.codigoPedido = ++contador;
         this.tempoEstimado = tempoEstimado;
         this.status = status;
-        produtos.addAll(produtos);
+        this.produto = produto;
         this.comercio = comercio;
     }
 
@@ -27,11 +27,11 @@ public class Pedido extends Produto {
         return codigoPedido;
     }
 
-    public Timespan getTempoEstimado() {
+    public String getTempoEstimado() {
         return tempoEstimado;
     }
 
-    public void setTempoEstimado(Timespan tempoEstimado) {
+    public void setTempoEstimado(String tempoEstimado) {
         this.tempoEstimado = tempoEstimado;
     }
 
@@ -43,12 +43,12 @@ public class Pedido extends Produto {
         this.status = status;
     }
 
-    public ArrayList<Produto> getProdutos() {
-        return produtos;
+    public Produto getProdutos() {
+        return produto;
     }
 
-    public void setProdutos(ArrayList<Produto> produtos) {
-        this.produtos = produtos;
+    public void setProdutos(Produto produtos) {
+        this.produto = produtos;
     }
 
     public Comercio getComercio() {
@@ -57,5 +57,12 @@ public class Pedido extends Produto {
 
     public void setComercio(Comercio comercio) {
         this.comercio = comercio;
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido: " + codigoPedido +
+                "\nTempo Estimado = " + tempoEstimado + " - " + status+
+                "\n====================";
     }
 }

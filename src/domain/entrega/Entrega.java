@@ -5,15 +5,15 @@ import domain.entregador.Entregador;
 import domain.pedido.Pedido;
 
 public class Entrega {
+    private static int contador = 0;
+    private int codigoEntrega;
     private Pedido pedido;
     private Entregador entregador;
     private Cliente cliente;
 
-    private int codigoEntrega;
-    private static int contador = 0;
 
     public Entrega(Pedido pedido, Entregador entregador, Cliente cliente) {
-        this.codigoEntrega = contador++;
+        this.codigoEntrega = ++contador;
         this.pedido = pedido;
         this.entregador = entregador;
         this.cliente = cliente;

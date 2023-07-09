@@ -3,19 +3,15 @@ package domain.produto;
 import java.util.ArrayList;
 
 public class Produto {
+    private static int contador = 0;
+    private long codigoProduto;
     private double valor;
     private String nome;
-    private String descricao;
-    private ArrayList<String> comentarios;
-    private long codigoProduto;
-    private static int contador = 0;
 
-    public Produto(double valor, String nome, String descricao, ArrayList<String> comentarios) {
+    public Produto(double valor, String nome) {
+        this.codigoProduto = contador++;
         this.valor = valor;
         this.nome = nome;
-        this.descricao = descricao;
-        this.comentarios = comentarios;
-        this.codigoProduto = contador++;
     }
 
     public double getValor() {
