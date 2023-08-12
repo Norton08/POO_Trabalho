@@ -33,4 +33,3 @@ Java 20
 Norton
 Jeovah
 Victor
-Odiney
