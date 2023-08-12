@@ -27,7 +27,7 @@ Uma "Plataforma" de pedidos C2B que gerencia cada parte dos pedidos assegurando 
 ### Configurações
 
 ### Tecnologias
-Java 20
+Java 20 e IDE IntelliJ para Estudantes
 
 ### Autores
 Norton
