@@ -56,4 +56,5 @@ public abstract class Pessoa {
     public void setResidencia(Endereco residencia) {
         this.residencia = residencia;
     }
+
 }
