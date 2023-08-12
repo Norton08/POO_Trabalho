@@ -12,6 +12,11 @@ public class Produto {
         this.nome = nome;
     }
 
+    public long getCodigoProduto() {
+
+        return codigoProduto;
+    }
+
     public double getValor() {
         return valor;
     }
@@ -26,9 +31,5 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public long getCodigoProduto() {
-        return codigoProduto;
     }
 }
