@@ -23,7 +23,7 @@ public class Main {
         //lê o banco de dados e armazena os dados em listas
         JOptionPane.showMessageDialog(null, "Olá, seja bem vindo ao sistema de entregas!");
         //menu principal com os botões de cadastro, consulta e sair
-        String[] opcoes = {"Cadastrar", "Consultar", "Editar", "Sair"};
+        String[] opcoes = {"Cadastrar", "Consultar", "Editar", "Excluir", "Sair"};
         int opcao=0;
         while (opcao != 3) {
             opcao = JOptionPane.showOptionDialog(null, "Escolha uma opção", "Menu Principal",
@@ -80,9 +80,16 @@ public class Main {
                             String loteEntregador = JOptionPane.showInputDialog("Digite o lote do entregador");
                             String quadraEntregador = JOptionPane.showInputDialog("Digite a quadra do entregador");
                             long numeroEntregador = Long.parseLong(JOptionPane.showInputDialog("Digite o número do endereço do entregador"));
+                            Entregador entregador = new Entregador(cpfEntregador,nomeEntregador,telefoneEntregador,
+                                                                    emailEntregador,endereco,loteEntregador)
                             break;
                         case 3:
                             //cadastrar produto
+                            double valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o Valor do produto"));
+                            String nomeProduto = JOptionPane.showInputDialog("Digite o Nome do produto");
+                            Produto p = new Produto(valor,nomeProduto);
+                            produtos.add(p);
+                            JOptionPane.showMessageDialog(null, p);
                             break;
                         case 4:
                             //cadastrar endereço
