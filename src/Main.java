@@ -8,10 +8,18 @@ import domain.produto.Produto;
 import enumss.Status;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        ArrayList<Comercio> comercios = new ArrayList<>();
+        ArrayList<Endereco> enderecos = new ArrayList<>();
+        ArrayList<Entregador> entregadores = new ArrayList<>();
+        ArrayList<Pedido> pedidos = new ArrayList<>();
+        ArrayList<Produto> produtos = new ArrayList<>();
+
         //lê o banco de dados e armazena os dados em listas
         JOptionPane.showMessageDialog(null, "Olá, seja bem vindo ao sistema de entregas!");
         //menu principal com os botões de cadastro, consulta e sair
